@@ -1,0 +1,27 @@
+.coursetable tbody {
+          display: block;
+          max-height: 410px;
+          overflow-y: scroll;
+        }
+        .coursetable td {
+
+        }
+
+        .coursetable thead,
+        .coursetable tbody tr {
+          display: table;
+          width: 100%;
+          table-layout: fixed;
+        }
+        .scroll tbody {
+          display: block;
+          max-height: 235px;
+          overflow-y: scroll;
+        }
+
+        .scroll thead,
+        .scroll tbody tr {
+          display: table;
+          width: 100%;
+          table-layout: fixed;
+        }

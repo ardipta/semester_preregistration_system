@@ -9,36 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Admin Panel</title>
-    
-    <style>
-        .coursetable tbody {
-          display: block;
-          max-height: 410px;
-          overflow-y: scroll;
-        }
-        .coursetable td {
-
-        }
-
-        .coursetable thead,
-        .coursetable tbody tr {
-          display: table;
-          width: 100%;
-          table-layout: fixed;
-        }
-        .scroll tbody {
-          display: block;
-          max-height: 235px;
-          overflow-y: scroll;
-        }
-
-        .scroll thead,
-        .scroll tbody tr {
-          display: table;
-          width: 100%;
-          table-layout: fixed;
-        }
-    </style>
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet">
 </head>
 
 <body class="theme-blue">
@@ -649,7 +620,7 @@
                         </div>
                         <div class="content">
                             <div class="text">Pre-Registered Till Now</div>{% for regStudent in regStudents %}
-                                
+
                             {% endfor %}
                             <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20">{{ regStudents.count }}</div>
                         </div>
@@ -1640,17 +1611,6 @@
                                                              <td>{{ waiver.totalWaiver }}</td>
                                                              <td>{{ waiver.amountofWaiver }}</td>
                                                              <td>{{ waiver.percentofWaiver }}</td>
-{#                                                           <td><a  class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#inputModalSemester" onclick="semesterEditor('{{ semester.semesterCode }}','{{ semester.semesterTitle }}','{{ semester.regOpenDate }}','{{ semester.regClosedDate }}');">Edit</a></td>#}
-{#                                                           <td><a class="btn btn-danger" href="/adminpanel/semesterDelete/{{ semester.id }}">Delete</a></td>#}
-{#                                                             <script type="text/javascript">#}
-{#                                                             function semesterEditor(semesterCode,semesterTitle,regOpenDate,regClosedDate){#}
-{#                                                                 document.getElementById('scode').value=semesterCode;#}
-{#                                                                 document.getElementById('scode').readOnly = true;#}
-{#                                                                 document.getElementById('stitle').value=semesterTitle;#}
-{#                                                                 document.getElementById('regOpenDate').value=regOpenDate;#}
-{#                                                                 document.getElementById('regClosedDate').value=regClosedDate;#}
-{#                                                             }#}
-{#                                                            </script>#}
                                                          </tr>
                                                     {% endfor %}
                                                     </tbody>
@@ -1752,7 +1712,7 @@
                 </div>
             </div>
 <footer style="z-index: 12;position: relative">
-    <div style="background-color: #00838f; height: 100px; justify-content: center;
+    <div style="background-color: #00838f; height: 100px; justify-content: center; margin-top: 288px;
   align-items: center; display: flex; ">
         <div><p>DEVELOPED BY-</p></div><br>
         <input style="margin-left: 20px" type="image" id="image" alt="Login" data-toggle="tooltip" data-original-title="Hafeezurrahman Saleh" data-placement="top" href=""
@@ -1769,33 +1729,6 @@
         <br><p >2020©All right reserved by Daffodil International University</p>
     </div>
 </footer>
-
-
-{#        <script >#}
-{#            $(document).ready(function() {#}
-{#                $("#courseList").on('click', '.viewsection', function () {#}
-{#                    var semester = document.getElementById('selectSemester').value;#}
-{#                    var row = $(this).closest('tr').children()[1];    // Find the row#}
-{#                    var te = $(row).html();#}
-{#                    console.log(te);#}
-{#                    try {#}
-{#                        req = $.ajax({#}
-{#                            url: '/adminpanel/studentlist',#}
-{#                            type: 'POST',#}
-{#                            data: {#}
-{#                                ccode: te,#}
-{#                                semester: semester#}
-{#                            }#}
-{#                        });#}
-{#                        alert('success');#}
-{#                    catch (e) {#}
-{#                        alert(e);#}
-{##}
-{##}
-{#                });#}
-{#            });#}
-{#            </script>#}
-
 
 </body>
 

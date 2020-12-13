@@ -1,7 +1,5 @@
-
 {% extends 'base.html' %}
 {% block body %}
-
 {% load static %}
 <!doctype html>
 <html lang="en">
@@ -12,31 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Final Registration</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <style>
-        .coursetable tbody {
-          display: block;
-          max-height: 550px;
-            min-height: 550px;
-          overflow-y: scroll;
-        }
-        .coursetable thead,
-        .coursetable tbody tr {
-          display: table;
-          width: 100%;
-          table-layout: fixed;
-        }
-        .scroll tbody {
-          display: block;
-          max-height: 235px;
-          overflow-y: scroll;
-        }
-        .scroll thead,
-        .scroll tbody tr {
-          display: table;
-          width: 100%;
-          table-layout: fixed;
-        }
-    </style>
+    <link href="{% static 'css/style3.css' %}" rel="stylesheet">
 </head>
 <body>
      <div class="card">
